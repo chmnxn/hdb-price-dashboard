@@ -1,0 +1,66 @@
+Title: 
+- HDB Resale Flat Price (Jan 2017 - Jul 2025)
+
+Abstract:
+- The HDB Resale Flat Price dataset (henceforth known as "dataset") is an accumulation of information relating to the sale of Singapore's public housing apartments colloquially known as "flats". Each record is one resale flat price transaction, with information describing the transaction of the sale and the features of the apartment. 
+- The original data was retrieved from Singapore's National Data Repository^1, although this variant includes additional information in five main categories:
+1. X/Y, Lat/Lng coordinates, which is useful for geosptal plotting and distance calculations.
+2. Closest MRT station to flat and the associated distance. This is useful in predicting resale flat prices since a big determinant in prices is proximity to public transportation.
+3. Closest primary school to flat and the associated distance. This is useful since proximity to a reputed school (such as the Raffles, Anglo Chinese, or St. Joseph's brands) are highly sought after by families with children.
+4. Proximity to the Central Business District (CBD), prices are higher the closer the flats are to the CBD.
+5. The URA planning area (or town) of the flat. This is useful for summarising flat prices in a particular planning area/ town.
+
+- This dataset was prepared for my kaggle notebook exploring the prices of flats in Singapore between 2017 to 2025. Crucially, I attempt to answer the burning question of whether public housing is indeed affordable to the common Singaporean citizen. 
+
+Keywords: Public Housing, Singapore, Real Estate, Analytics, Prediction, Social Policy
+
+Data Source: Collected from Singapore's National Data Repository - https://data.gov.sg^1
+
+Creator(s): Housing and Development Board (HDB), Singapore
+
+Geographic Coverage: Singapore
+
+Temporal Coverage: January 2017 - July 2025
+
+Column Information:
+
+'month'                             - The month of flat transaction.
+'town'                              - The HDB-defined town of the flat.
+'blk_no'                            - An address subcomponent - the block number of the flat.
+'road_name'                         - An address subcomponent - the road name of the flat.
+'building'                          - An address subcomponent - the building name of the flat.
+'postal'                            - An address subcomponent - the postal code of the flat.
+
+'resale_price'                      - The price that the (resale) flat was transacted at.
+'storey_range'                      - The storey range of the flat.
+'flat_type'                         - The category of the flat.
+'flat_model'                        - The flat model.
+'lease_commence_date'               - The date at which the flats lease commenced (flats are sold by the govenment on a 99-year lease term)
+'remaining_lease_years'             - The number of years of lease remaining for the flat at the time of purchase. 
+'remaining_lease_months'            - The number of months of lease remaining for the flat at the time of purchase. 'remaining_lease_years' + 'remaining_lease_month' gives the total lease remaining at time of purchase.                    
+'floor_area_sqm'                    - The size of the flat measured in square metres.
+'floor_area_sqft'                   - The size of the flat measured in square feet
+'price_per_sqft'                    - The price paid per square feet - a simple division of 'resale_price' and 'floor_area_sqft'
+
+'planning_area_ura'                 - The URA planning area in which the flat is sited
+'region_ura'                        - The cardinal direction of Singapore in which the flat is sited
+'x'                                 - The x coordinate of the flat (based on CRS: SVY21)
+'y'                                 - The y coordinate of the flat (based on CRS: SVY21)
+'latitude'                          - The latitude coordinate of the flat
+'longitude'                         - The latitude coordinate of the flat
+
+'closest_mrt_station'               - The closest MRT station to the flat
+'distance_to_mrt_meters'            - The displacement between the flat and the closest MRT station in metres (note that this is displacement and not distance)
+'transport_type'                    - The transport type of the closest MRT station. MRT or LRT.
+'line_color'                        - The line of the closest MRT staion. The line colour is analogous to the operational train routes (i.e North-South Line, Circle Line etc.)
+'distance_to_cbd'                   - The displacement between the flat and Raffles Place MRT station in metres, which is chosen as a proxy for the centre of the Central Business District
+'closest_pri_school'                - The closest primary school to the flat
+'distance_to_pri_school_meters'     - The displacement between the flat and the closest primary school in metres
+
+
+Usage Rights: Singapore Open Data License v1.0^2
+
+Contact Information: Lau Pei Wen; lau_pei_wen@hdb.gov.sg
+
+^1 https://data.gov.sg
+^2 https://data.gov.sg/open-data-licence
