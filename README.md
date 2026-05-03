@@ -1,5 +1,5 @@
 # hdb-price-dashboard
-All related code and documents for FYP outcome
+All related code and dataset for my work in UCCT3596 Project II. 
 
 Dataset used: https://www.kaggle.com/datasets/lzytim/hdb-resale-prices
 
